@@ -1,0 +1,364 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crafting Digital Stories | Web Design Portfolio</title>
+<style>
+:root {
+    --cream: #FDF5E6;
+    --blush: #FFE4E1;
+    --sage: #E1E9E3;
+    --dusty-blue: #B6C8D4;
+    --warm-gray: #5A5553;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--warm-gray);
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(45deg, var(--cream), var(--blush));
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--warm-gray);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--warm-gray);
+    opacity: 0.8;
+}
+
+.work-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--warm-gray);
+}
+
+.testimonials {
+    background: var(--sage);
+    padding: 100px 0;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.client-info {
+    font-weight: 600;
+    color: var(--warm-gray);
+}
+
+.connect {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--dusty-blue);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background: white;
+    color: var(--warm-gray);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social-button:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bringing Your Digital Vision to Life</h1>
+        <p class="tagline">I create beautiful websites that help businesses grow and stand out online.</p>
+    </div>
+</section>
+
+<section class="work-section" id="work">
+    <div class="container">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="portfolio-grid">
+        <article class="portfolio-item" data-url="https://sunshine-cafe.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/cafe-interior.jpg')">
+                <!-- Removed SVG placeholder since we now have background image -->
+            </div>
+            <div class="portfolio-content">
+                <h3>Sunshine Cafe</h3>
+                <p>A welcoming website that helped increase restaurant bookings by 50%</p>
+            </div>
+        </article>
+        
+        <article class="portfolio-item" data-url="https://peacefulflow.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/yoga-studio.jpg')">
+                <!-- Removed SVG placeholder -->
+            </div>
+            <div class="portfolio-content">
+                <h3>Peaceful Flow Yoga</h3>
+                <p>Modern booking system that simplified class registration for students</p>
+            </div>
+        </article>
+        
+        <article class="portfolio-item" data-url="https://styleandgrace.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/boutique-shop.jpg')">
+                <!-- Removed SVG placeholder -->
+            </div>
+            <div class="portfolio-content">
+                <h3>Style &amp; Grace Boutique</h3>
+                <p>Online store that doubled sales in the first month</p>
+            </div>
+        </article>
+
+        <article class="portfolio-item" data-url="https://artgallery.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/art-gallery.jpg')">
+                <!-- Removed SVG placeholder -->
+            </div>
+            <div class="portfolio-content">
+                <h3>Modern Art Gallery</h3>
+                <p>Virtual gallery experience with 3D artwork viewing capabilities</p>
+            </div>
+        </article>
+
+        <article class="portfolio-item" data-url="https://techstart.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/tech-startup.jpg')">
+                <!-- Removed SVG placeholder -->
+            </div>
+            <div class="portfolio-content">
+                <h3>TechStart Solutions</h3>
+                <p>Dynamic landing page that increased lead generation by 75%</p>
+            </div>
+        </article>
+
+        <article class="portfolio-item" data-url="https://ecostore.example.com" onclick="window.location.href=this.dataset.url">
+            <div class="portfolio-image" style="background-image: url('https://images.example.com/eco-store.jpg')">
+                <!-- Removed SVG placeholder -->
+            </div>
+            <div class="portfolio-content">
+                <h3>EcoLife Store</h3>
+                <p>Sustainable product marketplace with carbon footprint tracking</p>
+            </div>
+        </article>
+    </div>
+</div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+    <h2 class="section-title">What Clients Say</h2>
+    <style>
+        .testimonial-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            transform-origin: center;
+            backface-visibility: hidden;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 60px;
+            color: var(--dusty-blue);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover::before {
+            transform: translateY(-5px) rotate(-10deg);
+            opacity: 0.5;
+        }
+    </style>
+    
+    <div class="testimonial-card">
+        <p class="testimonial-text">"Working with this designer was a game-changer for our business. They understood exactly what we needed and delivered beyond our expectations."</p>
+        <p class="client-info">- Rachel Cohen, Sunshine Cafe Owner</p>
+    </div>
+    
+    <div class="testimonial-card">
+        <p class="testimonial-text">"Our new website perfectly captures the peaceful atmosphere of our studio. The booking system has made life easier for both our staff and students."</p>
+        <p class="client-info">- David Berg, Peaceful Flow Yoga</p>
+    </div>
+    
+    <div class="testimonial-card">
+        <p class="testimonial-text">"The e-commerce solution provided transformed our boutique's online presence. The attention to detail and user experience design is impeccable."</p>
+        <p class="client-info">- Sarah Martinez, Style &amp; Grace Boutique</p>
+    </div>
+    
+    <div class="testimonial-card">
+        <p class="testimonial-text">"From concept to execution, every step of the process was handled professionally. Our art gallery's website now truly reflects our aesthetic vision."</p>
+        <p class="client-info">- Michael Chang, Contemporary Arts Gallery</p>
+    </div>
+    
+    <div class="testimonial-card">
+        <p class="testimonial-text">"The mobile-first approach and responsive design have significantly improved our user engagement. Our podcast website has never looked better!"</p>
+        <p class="client-info">- Emma Watson, Digital Storytellers Podcast</p>
+    </div>
+</div>
+</section>
+
+<section class="connect">
+    <div class="container">
+        <h2 class="section-title">Let's Create Something Amazing Together</h2>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/webdesigner" class="social-button">Connect on LinkedIn</a>
+            <a href="https://instagram.com/webdesigner" class="social-button">Follow on Instagram</a>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll for links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe portfolio items and testimonials
+    document.querySelectorAll('.portfolio-item, .testimonial-card').forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.6s ease-out';
+        observer.observe(item);
+    });
+});
+</script>
+
+</body></html>
